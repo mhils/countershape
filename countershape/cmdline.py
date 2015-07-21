@@ -8,7 +8,7 @@ import livereload, livereload.handlers
 from . import doc, blog, analysis, model
 
 
-def main():
+def main(args=None):
     parser = argparse.ArgumentParser(
         description = "Renders a Countershape documentation tree."
     )
@@ -64,7 +64,7 @@ def main():
         nargs="?"
     )
 
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
     analysis_options = [
         "structure",
